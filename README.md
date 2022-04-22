@@ -19,14 +19,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/backblaze-b2-action@master
-      env:
-        SOURCE_DIR: './public'
-        B2_BUCKET: ${{ secrets.B2_BUCKET }}
-        B2_APPKEY_ID: ${{ secrets.B2_APPKEY_ID }}
-        B2_APPKEY: ${{ secrets.B2_APPKEY }}
-        B2_SYNC_THREADS: 1
+      - name: Checkout
+          uses: actions/checkout@v3
+      - name: B2 Cloud sync
+        uses: getpersio/backblaze-b2-action@main
+        env:
+          SOURCE_DIR: './public'
+          B2_BUCKET: ${{ secrets.B2_BUCKET }}
+          B2_APPKEY_ID: ${{ secrets.B2_APPKEY_ID }}
+          B2_APPKEY: ${{ secrets.B2_APPKEY }}
+          B2_SYNC_THREADS: 1
 
 ```
 
