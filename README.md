@@ -1,7 +1,5 @@
 # GitHub Action for [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) 🔥 
 
-> **⚠️ Note:** To use this action, you must have access to the [GitHub Actions](https://github.com/features/actions) feature. GitHub Actions are currently only available in public beta. You can [apply for the GitHub Actions beta here](https://github.com/features/actions/signup/).
-
 This simple action syncs a directory (either from your repository or generated during your workflow) with a remote bucket on [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html).
 
 Many find B2 appealing because of its free bandwidth deal with Cloudflare via the [Bandwidth Alliance](https://www.cloudflare.com/bandwidth-alliance/), but unlike [other](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services) popular cloud "bucket" providers like [DigitalOcean Spaces](https://developers.digitalocean.com/documentation/spaces/) and [DreamObjects](https://help.dreamhost.com/hc/en-us/articles/217590537-How-To-Use-DreamObjects-S3-compatible-API), it is [not compatible](https://help.backblaze.com/hc/en-us/articles/218513487-Is-the-B2-Cloud-Storage-API-Compatible-with-Amazon-S3-) with S3's API, so using this official Python-based [tool](https://github.com/Backblaze/B2_Command_Line_Tool) is required.
@@ -28,6 +26,8 @@ jobs:
         B2_BUCKET: ${{ secrets.B2_BUCKET }}
         B2_APPKEY_ID: ${{ secrets.B2_APPKEY_ID }}
         B2_APPKEY: ${{ secrets.B2_APPKEY }}
+        B2_SYNC_THREADS: 1
+
 ```
 
 
