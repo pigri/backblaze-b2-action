@@ -1,0 +1,6 @@
+name: backblaze-b2-action
+description: "Sync your files to the Backblaze B2 service"
+author: 'Persio'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
