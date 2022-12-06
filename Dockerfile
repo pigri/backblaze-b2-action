@@ -8,10 +8,10 @@ LABEL "com.github.actions.color"="red"
 LABEL version="0.1.0"
 LABEL repository="https://github.com/getpersio/backblaze-b2-action"
 LABEL homepage="https://persio.io/"
-LABEL maintainer="Persio <hello@persio.io"
+LABEL maintainer="Persio <hello@persio.io>"
 
 # https://github.com/Backblaze/B2_Command_Line_Tool/releases
-ENV B2CLI_VERSION="3.5.0"
+ENV B2CLI_VERSION="3.6.0"
 
 RUN pip install --quiet --no-cache-dir b2==${B2CLI_VERSION}
 
