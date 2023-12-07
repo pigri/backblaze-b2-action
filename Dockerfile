@@ -11,9 +11,9 @@ LABEL homepage="https://persio.io/"
 LABEL maintainer="Persio <hello@persio.io>"
 
 # https://github.com/Backblaze/B2_Command_Line_Tool/releases
-ENV B2CLI_VERSION="3.13.1"
+ENV B2CLI_VERSION="3.15.0"
 
 RUN pip install --quiet --no-cache-dir b2==${B2CLI_VERSION}
 
-ADD entrypoint.sh /entrypoint.sh
+ADD entry point.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
