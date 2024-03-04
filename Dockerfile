@@ -15,5 +15,5 @@ ENV B2CLI_VERSION="3.16.1"
 
 RUN pip install --quiet --no-cache-dir b2==${B2CLI_VERSION}
 
-ADD entry point.sh /entrypoint.sh
+ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
