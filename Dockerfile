@@ -6,12 +6,12 @@ LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="red"
 
 LABEL version="0.1.0"
-LABEL repository="https://github.com/getpersio/backblaze-b2-action"
-LABEL homepage="https://persio.io/"
-LABEL maintainer="Persio <hello@persio.io>"
+LABEL repository="https://github.com/pigri/backblaze-b2-action"
+LABEL homepage="https://david.pigri.ai/"
+LABEL maintainer="David <hello@papp.ai>"
 
 # https://github.com/Backblaze/B2_Command_Line_Tool/releases
-ENV B2CLI_VERSION="4.5.1"
+ENV B2CLI_VERSION="4.6.0"
 
 RUN pip install --quiet --no-cache-dir b2==${B2CLI_VERSION}
 
