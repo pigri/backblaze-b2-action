@@ -11,7 +11,7 @@ LABEL homepage="https://david.pigri.ai/"
 LABEL maintainer="David <hello@papp.ai>"
 
 # https://github.com/Backblaze/B2_Command_Line_Tool/releases
-ENV B2CLI_VERSION="4.7.1"
+ENV B2CLI_VERSION="5.0.0"
 
 RUN pip install --quiet --no-cache-dir b2==${B2CLI_VERSION}
 
