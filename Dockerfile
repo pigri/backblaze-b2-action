@@ -1,4 +1,4 @@
-FROM python:3.15.0rc2-alpine
+FROM python:3.16.0a1-alpine
 
 LABEL "com.github.actions.name"="Backblaze B2 Sync"
 LABEL "com.github.actions.description"="Sync a directory to a Backblaze B2 cloud storage bucket"
